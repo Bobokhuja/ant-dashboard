@@ -4,10 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { store } from '@app/store'
 
+import { ThemeProvider } from './theme-provider'
+
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
     <BrowserRouter>
-      <Provider store={store}>{children}</Provider>
+      <ThemeProvider>
+        <Provider store={store}>{children}</Provider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }
