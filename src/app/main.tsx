@@ -1,8 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-createRoot(document.getElementById('root')!).render(
+import { Providers } from '@app/providers'
+
+createRoot(document.querySelector('#root')!).render(
   <StrictMode>
-    Ant Dashboard
+    <Providers />
   </StrictMode>,
 )
