@@ -3,8 +3,12 @@ import { createRoot } from 'react-dom/client'
 
 import { Providers } from '@app/providers'
 
+import { AppRouter } from './router'
+
 createRoot(document.querySelector('#root')!).render(
   <StrictMode>
-    <Providers />
+    <Providers>
+      <AppRouter />
+    </Providers>
   </StrictMode>,
 )
