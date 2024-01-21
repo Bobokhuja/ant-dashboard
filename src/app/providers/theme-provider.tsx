@@ -1,6 +1,12 @@
 import { PropsWithChildren } from 'react'
-import { ConfigProvider } from 'antd'
+import { App, ConfigProvider } from 'antd'
+
+import 'antd/dist/reset.css'
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
-  return <ConfigProvider>{children}</ConfigProvider>
+  return (
+    <ConfigProvider>
+      <App>{children}</App>
+    </ConfigProvider>
+  )
 }

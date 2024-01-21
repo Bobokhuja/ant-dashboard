@@ -1,7 +1,9 @@
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import { routes } from '@app/router/routes'
+import { AppLayout } from '@shared/ui/app-layout/app-layout'
 
+import { navbar } from '../../config/navbar'
 import { groupingRoutes } from '../lib/grouping-routes'
 import { renderRoutes } from './render-routes'
 
@@ -13,7 +15,7 @@ export const AppRouter = () => {
       {/** layout route */}
       <Route
         path="/"
-        element={<Outlet />}
+        element={<AppLayout navItems={navbar} />}
       >
         {renderRoutes(withLayout)}
       </Route>
