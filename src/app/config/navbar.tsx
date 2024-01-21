@@ -3,9 +3,10 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons'
-import { ItemType } from 'antd/es/menu/hooks/useItems'
 
-export const navbar: ItemType[] = [
+import { MenuItem } from '@shared/model'
+
+export const navbar: MenuItem[] = [
   {
     key: '/',
     icon: <UserOutlined />,

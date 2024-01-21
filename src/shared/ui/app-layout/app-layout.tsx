@@ -1,6 +1,7 @@
 import { Layout as AntLayout } from 'antd'
-import { ItemType } from 'antd/es/menu/hooks/useItems'
 import styled from 'styled-components'
+
+import { MenuItem } from '@shared/model'
 
 import { Content } from './content'
 import { Header } from './header'
@@ -10,7 +11,7 @@ const Layout = styled(AntLayout)`
   height: 100vh;
 `
 
-export const AppLayout = ({ navItems }: { navItems: ItemType[] }) => {
+export const AppLayout = ({ navItems }: { navItems: MenuItem[] }) => {
   return (
     <Layout>
       <Navbar items={navItems} />
