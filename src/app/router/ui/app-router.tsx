@@ -12,6 +12,7 @@ const { withLayout, withoutLayout } = groupingRoutes(routes)
 
 export const AppRouter = () => {
   const menuItems = useAccessControl({ navbar, guards })
+  console.log(menuItems)
   return (
     <Routes>
       {/** layout route */}

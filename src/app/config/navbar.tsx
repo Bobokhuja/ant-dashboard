@@ -15,6 +15,7 @@ export const navbar: MenuItem[] = [
       {
         key: '/home',
         label: 'Home',
+        guarded: true,
       },
     ],
   },
