@@ -3,6 +3,7 @@ import { Layout, Menu } from 'antd'
 
 import { MenuItem, navbarSelector, useAppSelector } from '@shared/model'
 
+import { transformToItemType } from '../../access-control/transformToItemType'
 import { NavbarLogo } from './navbar-logo'
 
 export const Navbar = ({ items }: { items: MenuItem[] }) => {
@@ -22,10 +23,9 @@ export const Navbar = ({ items }: { items: MenuItem[] }) => {
       <Menu
         theme="dark"
         mode="inline"
-        items={items}
+        items={transformToItemType(items)}
         selectedKeys={[active]}
         onSelect={(item) => {
-          console.log(item)
           navigate(item.key)
         }}
       />

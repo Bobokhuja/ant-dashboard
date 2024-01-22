@@ -11,6 +11,7 @@ export const navbar: MenuItem[] = [
     key: '/',
     icon: <UserOutlined />,
     label: 'Главная страница',
+    guarded: true,
   },
   {
     key: '/second',

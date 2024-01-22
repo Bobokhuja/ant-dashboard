@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react'
 
-import { GuardItem, MenuItem } from '@shared/model'
+import { MenuItem } from '@shared/model'
 
 import { filterNavbar } from './filter-navbar'
 
-interface Props {
-  navbar: MenuItem[]
-  guards: GuardItem[]
-}
-
-export const useAccessControl = ({ navbar, guards }: Props) => {
+export const useAccessControl = (navbar: MenuItem[]) => {
   const [items, setItems] = useState<MenuItem[]>([])
 
   useEffect(() => {
-    setItems(filterNavbar(navbar, guards))
-  }, [navbar, guards])
+    setItems(filterNavbar(navbar))
+  }, [navbar])
 
   return items
 }
