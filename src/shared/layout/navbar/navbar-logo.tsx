@@ -1,9 +1,7 @@
 import { FC, HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-import { useAppSelector } from '@shared/model'
-
-import { navbarSelector } from './navbar-slice'
+import { useMenu } from './store'
 
 const Logo: FC<
   HTMLAttributes<HTMLDivElement> & { $collapsed: boolean }
@@ -29,7 +27,7 @@ const LogoText: FC<
 `
 
 export const NavbarLogo = () => {
-  const collapsed = useAppSelector(navbarSelector)
+  const collapsed = useMenu((state) => state.collapsed)
 
   return (
     <Logo $collapsed={collapsed}>

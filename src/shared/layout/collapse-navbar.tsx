@@ -2,12 +2,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Button as AntButton } from 'antd'
 import styled from 'styled-components'
 
-import {
-  navbarSelector,
-  toggleCollapseNavbar,
-  useAppDispatch,
-  useAppSelector,
-} from '../model'
+import { useMenu } from './navbar/store'
 
 const Button = styled(AntButton)`
   font-size: 16px;
@@ -16,19 +11,17 @@ const Button = styled(AntButton)`
 `
 
 export const CollapseNavbar = () => {
-  const collapsed = useAppSelector(navbarSelector)
-  const dispatch = useAppDispatch()
+  const [collapsed, toggle] = useMenu(({ collapsed, toggle }) => [
+    collapsed,
+    toggle,
+  ])
   const CollapseIcon = collapsed ? MenuUnfoldOutlined : MenuFoldOutlined
-
-  const toggleCollapse = () => {
-    dispatch(toggleCollapseNavbar())
-  }
 
   return (
     <Button
       type="text"
       icon={<CollapseIcon />}
-      onClick={toggleCollapse}
+      onClick={toggle}
     />
   )
 }

@@ -1,15 +1,13 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 
-import { useAppSelector } from '@shared/model'
-
 import { transformToItemType } from '../access-control/transformToItemType'
 import { MenuItem } from './menu-item'
 import { NavbarLogo } from './navbar-logo'
-import { navbarSelector } from './navbar-slice'
+import { useMenu } from './store'
 
 export const Navbar = ({ items }: { items: MenuItem[] }) => {
-  const collapsed = useAppSelector(navbarSelector)
+  const collapsed = useMenu((state) => state.collapsed)
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const active = items.find((item) => item.key === pathname)?.key as string
@@ -27,8 +25,8 @@ export const Navbar = ({ items }: { items: MenuItem[] }) => {
         mode="inline"
         items={transformToItemType(items)}
         selectedKeys={[active]}
-        onSelect={(item) => {
-          navigate(item.key)
+        onSelect={({ key }) => {
+          navigate(key)
         }}
       />
     </Layout.Sider>

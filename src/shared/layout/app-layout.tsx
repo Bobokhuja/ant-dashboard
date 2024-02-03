@@ -1,9 +1,9 @@
 import { Layout as AntLayout } from 'antd'
 import styled from 'styled-components'
 
-import { MenuItem } from '../model'
 import { Content } from './content'
 import { Header } from './header'
+import { MenuItem } from './navbar/menu-item'
 import { Navbar } from './navbar/navbar'
 
 const Layout = styled(AntLayout)`

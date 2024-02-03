@@ -7,6 +7,7 @@ export const Header = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken()
+
   return (
     <AppHeader $background={colorBgContainer}>
       <CollapseNavbar />

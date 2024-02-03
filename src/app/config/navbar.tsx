@@ -4,7 +4,7 @@ import {
   VideoCameraOutlined,
 } from '@ant-design/icons'
 
-import { MenuItem } from '@shared/model'
+import { MenuItem } from '@shared/layout'
 
 export const navbar: MenuItem[] = [
   {

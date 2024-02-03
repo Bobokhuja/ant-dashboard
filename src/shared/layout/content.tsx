@@ -20,6 +20,7 @@ export const Content = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
+
   return (
     <AppContent
       $radius={borderRadiusLG}
