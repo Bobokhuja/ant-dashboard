@@ -1,5 +1,5 @@
 import { MainPage } from '@pages/main-page'
-import { NotFound } from '@pages/not-found'
+import { NotFoundPage } from '@pages/not-found'
 import { RouteType } from '@shared/router'
 
 export const routes: RouteType[] = [
@@ -11,7 +11,7 @@ export const routes: RouteType[] = [
   {
     key: 'not-found',
     path: '*',
-    element: <NotFound />,
+    element: <NotFoundPage />,
     withoutLayout: true,
   },
 ]

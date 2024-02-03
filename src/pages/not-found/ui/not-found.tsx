@@ -2,7 +2,7 @@ import { Result } from 'antd'
 
 import { ToHomeLink } from '@features/to-home'
 
-export const NotFound = () => {
+export const Page = () => {
   return (
     <Result
       status="404"
