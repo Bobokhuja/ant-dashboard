@@ -1,3 +1,3 @@
 export * from '../layout'
-export * from '../layout/access-control/use-access-control'
+export * from './link-button'
 export * from './loaders'

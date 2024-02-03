@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Result } from 'antd'
+
+import { ToHomeLink } from '@features/to-home'
 
 export const NotFound = () => {
   return (
-    <div className="flex items-center flex-col justify-center h-screen">
-      404 Not found
-      <Link to="/">To Home</Link>
-    </div>
+    <Result
+      status="404"
+      title="404"
+      subTitle="Страница не найдена"
+      extra={<ToHomeLink />}
+    />
   )
 }
