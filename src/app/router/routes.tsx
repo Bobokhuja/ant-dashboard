@@ -1,7 +1,6 @@
 import { MainPage } from '@pages/main-page'
 import { NotFound } from '@pages/not-found'
-
-import { RouteType } from './model/route-type'
+import { RouteType } from '@shared/router'
 
 export const routes: RouteType[] = [
   {

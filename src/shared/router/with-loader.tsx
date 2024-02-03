@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactNode, Suspense } from 'react'
 
-import { PageLoader } from '@shared/ui'
+import { PageLoader } from '../ui'
 
 interface Props extends PropsWithChildren {
   loader?: ReactNode

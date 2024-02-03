@@ -1,1 +1,1 @@
-export * from './ui/app-router'
+export * from './app-router'

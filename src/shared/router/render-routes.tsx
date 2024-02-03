@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom'
 
-import { RouteType } from '../model/route-type'
+import { RouteType } from './route-type'
 import { WithLoader } from './with-loader'
 
 export const renderRoutes = (routes: RouteType[]) => {

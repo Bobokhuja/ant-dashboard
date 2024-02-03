@@ -1,4 +1,4 @@
-import { RouteType } from '../model/route-type'
+import { RouteType } from './route-type'
 
 interface GroupingRoutesReturnType {
   withLayout: RouteType[]

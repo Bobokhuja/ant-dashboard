@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 
-import { routes } from '@app/router/routes'
+import { groupingRoutes, renderRoutes } from '@shared/router'
 import { AppLayout, useAccessControl } from '@shared/ui'
 
-import { navbar } from '../../config/navbar'
-import { groupingRoutes } from '../lib/grouping-routes'
-import { renderRoutes } from './render-routes'
+import { navbar } from '../config/navbar'
+import { routes } from './routes'
 
 const { withLayout, withoutLayout } = groupingRoutes(routes)
 
