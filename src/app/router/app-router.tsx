@@ -1,22 +1,19 @@
 import { Route, Routes } from 'react-router-dom'
 
 import { groupingRoutes, renderRoutes } from '@shared/router'
-import { AppLayout, useAccessControl } from '@shared/ui'
 
-import { navbar } from '../config/navbar'
-import { routes } from './routes'
+import { routes } from '../config/routes'
+import { Layout } from '../layout'
 
 const { withLayout, withoutLayout } = groupingRoutes(routes)
 
 export const AppRouter = () => {
-  const menuItems = useAccessControl(navbar)
-
   return (
     <Routes>
       {/** layout route */}
       <Route
         path="/"
-        element={<AppLayout navItems={menuItems} />}
+        element={<Layout />}
       >
         {renderRoutes(withLayout)}
       </Route>
