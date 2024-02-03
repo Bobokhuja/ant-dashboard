@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { MenuItem } from '@shared/model'
-
+import { MenuItem } from '../../model'
 import { filterNavbar } from './filter-navbar'
 
 export const useAccessControl = (navbar: MenuItem[]) => {

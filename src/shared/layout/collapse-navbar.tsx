@@ -7,7 +7,7 @@ import {
   toggleCollapseNavbar,
   useAppDispatch,
   useAppSelector,
-} from '@shared/model'
+} from '../model'
 
 const Button = styled(AntButton)`
   font-size: 16px;

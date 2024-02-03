@@ -1,10 +1,12 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 
-import { MenuItem, navbarSelector, useAppSelector } from '@shared/model'
+import { useAppSelector } from '@shared/model'
 
-import { transformToItemType } from '../../access-control/transformToItemType'
+import { transformToItemType } from '../access-control/transformToItemType'
+import { MenuItem } from './menu-item'
 import { NavbarLogo } from './navbar-logo'
+import { navbarSelector } from './navbar-slice'
 
 export const Navbar = ({ items }: { items: MenuItem[] }) => {
   const collapsed = useAppSelector(navbarSelector)

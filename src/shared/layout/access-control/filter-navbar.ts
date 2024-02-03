@@ -1,5 +1,4 @@
-import { MenuItem } from '@shared/model'
-
+import { MenuItem } from '../navbar/menu-item'
 import { hasAccess } from './has-access'
 
 export const filterNavbar = (navbar: MenuItem[]): MenuItem[] => {

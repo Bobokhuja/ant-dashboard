@@ -1,3 +1,3 @@
-export * from './access-control/use-access-control'
-export * from './app-layout'
+export * from '../layout'
+export * from '../layout/access-control/use-access-control'
 export * from './loaders'
